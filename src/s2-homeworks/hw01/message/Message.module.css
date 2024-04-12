@@ -1,5 +1,6 @@
 .message {
-
+ width: 50%;
+ min-height: 77px;
 }
 
 .imageAndText {
@@ -7,10 +8,16 @@
 }
 
 .imageAndText img {
-
+ width: 48px;
 }
 
 .text {
+
+    color: rgba(0, 102, 204, 1);
+background-image: url("../Rectangle-3.svg");
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 60px;    
 
 }
 
@@ -19,13 +26,31 @@
 }
 
 .name {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.94px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+
 
 }
 
 .messageText {
+font-family: Montserrat;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.5px;
+text-align: left;
 
 }
 
 .time {
-
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12.19px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+    ;
 }
