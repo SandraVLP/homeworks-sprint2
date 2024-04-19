@@ -42,7 +42,8 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): a
   //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
 else {
-    return affairs.filter(affairs => affairs.priority) // need to fix
+    return affairs.filter((affair: AffairType) => affair.priority === filter) // need to fix
+
 }
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
