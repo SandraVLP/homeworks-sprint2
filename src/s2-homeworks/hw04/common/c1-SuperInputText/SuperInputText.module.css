@@ -1,7 +1,18 @@
 .input:focus {
+  border: 1px solid rgba(209, 209, 209, 1);
 }
 
 .input {
+  width: 372px;
+  height: 36px;
+  border: 1px solid rgba(209, 209, 209, 1);
+  border-radius: 5px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  padding: 8px 12px;
 }
 
 .inputWrapper {
@@ -11,10 +22,27 @@
 }
 
 .errorInput {
+  width: 372px;
+  height: 36px;
+  border-radius: 5px;
+  margin-right: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  padding-top: 8px 12px;
+  border: 1px solid rgba(204, 0, 0, 1);
 }
 
 .errorInput:focus {
+    border: 1px solid rgba(204, 0, 0, 1);
 }
 
 .error {
+    color: rgba(204, 0, 0, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: left;
+    margin-top: 7px;
 }
