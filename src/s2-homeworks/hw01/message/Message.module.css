@@ -19,11 +19,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgba(0, 102, 204, 1);
-  background-image: url("../Rectangle3.png");
+  background-color: rgba(0, 102, 204, 1);
+  border-radius: 5px;
+  /* background-image: url("../Rectangle3.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 60px;
+  min-width: 150px;
+  word-wrap: break-word;
 }
 
 .text:after {
@@ -36,6 +39,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 60px;
+    min-width: 150px;
+    word-wrap: break-word;
   
 }
 
@@ -55,6 +60,7 @@
   line-height: 19.5px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
+  word-wrap: break-word;
 }
 
 .time {

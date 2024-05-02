@@ -11,12 +11,14 @@
 }
 
 .nav a {
+    color: chartreuse
 }
 
 .nav a:hover {
 }
 
 .nav a.active {
+    color: blueviolet;
 }
 .close {
 }
