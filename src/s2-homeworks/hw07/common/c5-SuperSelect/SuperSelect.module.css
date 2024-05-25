@@ -1,4 +1,12 @@
 .select {
+    width: 165px;
+    font-family: "Montserrat";
+font-size: 14px;
+font-weight: 400;
+line-height: 17.07px;
+text-align: left;
+height: 24px;
+
 }
 
 .select:focus {
