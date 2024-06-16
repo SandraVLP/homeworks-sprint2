@@ -9,7 +9,7 @@ const reducers = combineReducers({
 
 const store = legacy_createStore(reducers)
 
-export default store
+export default store 
 
 export type AppStoreType = ReturnType<typeof reducers>
 
