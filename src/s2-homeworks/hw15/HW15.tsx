@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import { log } from 'console'
 
 /*
 * 1 - дописать SuperPagination
@@ -47,26 +48,34 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
-    const sendQuery = (params: any) => {
+    const sendQuery = (params: ParamsType) => {
         setLoading(true)
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if(res){
+                    setTechs(res.data.techs) 
+                    setTotalCount(res.data.totalCount)  
+                }
+                 
                 // сохранить пришедшие данные
 
                 //
             })
+            .finally(() =>  setLoading(false))
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
-        // setCount(
+        setPage(newPage)
+        setCount(newCount)
+        const paramsObject = { sort, page: newPage, count: newCount }
+        const searchParamsObject = { sort, page: newPage.toString(), count: newCount.toString() }
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery(paramsObject)
+        setSearchParams(searchParamsObject)
+    
 
         //
     }
@@ -74,18 +83,20 @@ const HW15 = () => {
     const onChangeSort = (newSort: string) => {
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
+        const params = {page: 1, count, sort:newSort, }
+        const searchParamsObject = {page: "1", count: count.toString(), sort:newSort.toString() }
+        sendQuery(params)
+        setSearchParams(searchParamsObject)
 
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        //const params = { sort, page: newPage.toString(), count: newCount.toString() }
+ 
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: parseInt(params.page), count: parseInt(params.count), sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
